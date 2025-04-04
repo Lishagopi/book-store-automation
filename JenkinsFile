@@ -1,0 +1,5 @@
+stage('Trigger QA Automation') {
+    steps {
+        build job: 'QA-Repo'
+    }
+}
