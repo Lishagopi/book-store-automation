@@ -1,5 +1,17 @@
-stage('Trigger QA Automation') {
-    steps {
-        build job: 'QA-Repo'
+pipeline {
+    agent any
+
+    stages {
+        stage('Build Dev') {
+            steps {
+                echo 'Build or test dev code here'
+            }
+        }
+
+        stage('Trigger QA Automation') {
+            steps {
+                build job: 'QA-Repo'
+            }
+        }
     }
 }
